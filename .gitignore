@@ -1,2 +1,13 @@
 # Ignore submodules
 dependencies/*
+
+# Ignore the build directory
+build/*
+
+# Ignore standard CUDA ignore files
+*.i
+*.ii
+*.gpu
+*.ptx
+*.cubin
+*.fatbin
