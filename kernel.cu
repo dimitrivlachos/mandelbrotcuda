@@ -3,6 +3,7 @@
 #include <stdint.h>
 
 // Calculate the number of iterations required for a complex number to escape the Mandelbrot set
+// Based on: http://selkie.macalester.edu/csinparallel/modules/CUDAArchitecture/build/html/1-Mandelbrot/Mandelbrot.html
 __device__
 uint32_t mandel_double(double cr, double ci, int max_iter) {
     double zr = 0;      // real part of z
@@ -78,7 +79,7 @@ void mandelbrot(
                 int width, int height,      // Image dimensions
                 double x_min, double x_max, // Mandelbrot set coordinates
                 double y_min, double y_max, // Mandelbrot set coordinates
-                int max_iter                // Maximum number of iterations
+                int max_iter
                 )
 {
     /*
